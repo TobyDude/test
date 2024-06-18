@@ -4,7 +4,7 @@ if [ ! -f ${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run ]; then
   wget -q -nc --show-progress --progress=bar:force:noscroll -O ${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run https://storage.googleapis.com/nvidia-drivers-us-public/GRID/vGPU17.0/NVIDIA-Linux-x86_64-550.54.14-grid.run/${NV_DRV_V}/NVIDIA-Linux-x86_64-${NV_DRV_V}.run
 fi
 
-# Make the Nvidia driver executable and install it in a temporary directory
+
 chmod +x ${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run
 mkdir -p /NVIDIA/usr/lib64/xorg/modules/{drivers,extensions} /NVIDIA/usr/bin /NVIDIA/etc /NVIDIA/lib/modules/${UNAME}/kernel/drivers/video /NVIDIA/lib/firmware
 ${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run --kernel-name=$UNAME \
