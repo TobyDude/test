@@ -5,9 +5,8 @@ VERSION="$(date +'%Y.%m.%d')"
 
 # Download the Nvidia driver package if it does not exist
 cd "${DATA_DIR}"
-if [ ! -f "${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run" ]; then
   wget -q --show-progress --progress=bar:force:noscroll -O "${DATA_DIR}/NVIDIA_v${NV_DRV_V}.run" \
-  "http://us.download.nvidia.com/XFree86/Linux-x86_64/${NV_DRV_V}/NVIDIA-Linux-x86_64-${NV_DRV_V}.run"
+  "https://storage.googleapis.com/nvidia-drivers-us-public/GRID/vGPU17.0/NVIDIA-Linux-x86_64-550.54.14-grid.run"
 fi
 
 # Make the Nvidia driver executable and install it in a temporary directory
