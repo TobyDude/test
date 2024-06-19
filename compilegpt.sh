@@ -3,7 +3,7 @@
 # Set your variables here
 DATA_DIR="/test"
 NV_DRV_V="550.54.14" # Example version
-UNAME=$(uname -r)
+UNAME=$(6.1.74-Unraid)
 CPU_COUNT=$(nproc)
 LIBNVIDIA_CONTAINER_V="1.10.0" # Example version
 CONTAINER_TOOLKIT_V="1.9.0" # Example version
